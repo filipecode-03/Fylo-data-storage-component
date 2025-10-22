@@ -1,0 +1,30 @@
+.meter-container {
+    background-color: #0c122c;
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 9999px;
+    margin-top: 20px;
+}
+
+.meter {
+    width: calc(100% * 0.785);
+    background: linear-gradient(to right, #ffa399, #ff4d97);
+    height: .75rem;
+    border-radius: inherit;
+    position: relative;
+    animation: progressFill 1s;
+}
+
+.dot {
+    position: absolute;
+    height: 90%;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    right: 0.25rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    animation: show 1s;
+}
