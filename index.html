@@ -28,29 +28,6 @@
             min-height: 100vh;
         }
     }
-    input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 20px;
-    width: 20px;
-    border-radius: 9999px;
-    background: white;
-    cursor: pointer;
-    box-shadow: 0 0 2px #000;
-    position: relative;
-    z-index: 2;
-  }
-
-  input[type="range"]::-moz-range-thumb {
-    height: 20px;
-    width: 20px;
-    border-radius: 9999px;
-    background: white;
-    cursor: pointer;
-    box-shadow: 0 0 2px #000;
-    position: relative;
-    z-index: 2;
-  }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -79,22 +56,5 @@
       <img src="images/Group2.png" alt="picture" class="hidden lg:block absolute left-[325px] bottom-[125px]">
     </div>
   </main>
-  <script>
-    const range = document.getElementById("range");
-
-  function updateRangeBackground(el) {
-    const value = (el.value - el.min) / (el.max - el.min) * 100;
-    el.style.background = `linear-gradient(to right, #ffa399, #ff4d97 ${value}%, #0c122c ${value}%)`;
-  }
-
-  // Atualiza ao carregar
-  updateRangeBackground(range);
-
-  // Atualiza ao mudar o valor
-  range.addEventListener("input", function () {
-    updateRangeBackground(this);
-  });
-
-  </script>
 </body>
 </html>
